@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[YOUR AGENCY NAME] | Independent Cruise Travel Agency</title>
+<meta name="description" content="Independent cruise experts on the phone. Flight + cruise packages, weddings and groups, senior and military rates. Call [PHONE DISPLAY].">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#0B2238;
+  --harbor:#0F2A44;
+  --deep:#081A2B;
+  --lagoon:#1C8C88;
+  --lagoon-soft:#E1F2F0;
+  --brass:#E9B44C;
+  --brass-hi:#F4C96E;
+  --foam:#F5F9FA;
+  --ink:#3E4F60;
+  --muted:#6B7C8C;
+  --line:#D6E2E6;
+  --display:"Bricolage Grotesque",Georgia,serif;
+  --body:"Figtree",-apple-system,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--harbor);background:var(--foam);line-height:1.6;font-size:17px;padding-bottom:84px}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.ico{width:20px;height:20px;flex:none}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(30px,3.6vw,44px);line-height:1.06;letter-spacing:-.02em}
+section{padding:96px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:40px}
+.section-head p{color:var(--ink);max-width:44ch}
+
+/* top bar */
+.top{position:absolute;top:0;left:0;right:0;z-index:5}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:22px;padding-bottom:22px}
+.brand{font-family:var(--display);font-weight:800;font-size:23px;color:#fff;text-decoration:none;letter-spacing:-.01em;line-height:1.1}
+.brand small{display:block;font-family:var(--body);font-weight:500;font-size:12px;color:#A9C6D8;letter-spacing:0;margin-top:2px}
+.top-call{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:600;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);padding:10px 16px;border-radius:999px;backdrop-filter:blur(6px)}
+.top-call:hover{background:rgba(255,255,255,.18)}
+.top-call span{color:var(--brass-hi)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--night);color:#fff;min-height:720px}
+.scene{position:absolute;inset:0;width:100%;height:100%}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding-top:150px;padding-bottom:190px}
+.status{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;background:rgba(8,26,43,.55);border:1px solid rgba(255,255,255,.18);padding:7px 14px 7px 12px;border-radius:999px;margin-bottom:22px}
+.dot{width:9px;height:9px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 4px rgba(74,222,128,.22)}
+.status.closed .dot{background:var(--brass);box-shadow:0 0 0 4px rgba(233,180,76,.25)}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(40px,5.6vw,70px);line-height:1;letter-spacing:-.03em;margin-bottom:22px;text-wrap:balance}
+.hero .lead{font-size:20px;color:#D2E3EC;max-width:32ch;margin-bottom:30px}
+.ticks{list-style:none;display:grid;gap:10px;color:#E8F1F5}
+.ticks li{display:flex;gap:10px;align-items:center}
+.ticks svg{color:var(--brass-hi)}
+
+/* boarding pass */
+.pass{display:grid;grid-template-columns:1fr 200px;background:#fff;color:var(--harbor);border-radius:20px;transform:rotate(-2deg);box-shadow:0 30px 60px -20px rgba(0,0,0,.55);animation:board 1s cubic-bezier(.2,.8,.2,1) .15s both}
+@keyframes board{from{opacity:0;transform:translateY(40px) rotate(-6deg)}to{opacity:1;transform:rotate(-2deg)}}
+@media (prefers-reduced-motion:reduce){.pass{animation:none}}
+.pass-main{padding:26px 26px 22px}
+.pass-head{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--harbor);padding-bottom:10px;margin-bottom:14px}
+.pass-head b{font-family:var(--display);font-size:20px;font-weight:800;display:flex;align-items:center;gap:8px}
+.pass-head span{font-size:13px;color:var(--lagoon);font-weight:700}
+.route{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:800;font-size:30px;margin:4px 0 16px;letter-spacing:-.01em}
+.route i{flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--lagoon) 0 8px,transparent 8px 14px);position:relative}
+.route i::after{content:"";position:absolute;right:-2px;top:-4px;border-left:9px solid var(--lagoon);border-top:5px solid transparent;border-bottom:5px solid transparent}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px}
+.fields div:first-child{grid-column:1/-1}
+.fields dt{font-size:12px;color:var(--muted)}
+.fields dd{font-weight:600;font-size:15.5px;line-height:1.35}
+.stub{background:var(--brass);border-radius:0 20px 20px 0;padding:22px 18px 18px;display:flex;flex-direction:column;justify-content:center;text-align:center;position:relative;border-left:2px dashed rgba(15,42,68,.45)}
+.stub::before,.stub::after{content:"";position:absolute;left:-14px;width:26px;height:26px;border-radius:50%;background:var(--night)}
+.stub::before{top:-13px}.stub::after{bottom:-13px}
+.stub small{font-size:13px;font-weight:700}
+.stub .num{font-family:var(--display);font-weight:800;font-size:22px;line-height:1.15;margin:8px 0 14px;word-break:break-word}
+.barcode{height:34px;margin-top:14px;background:repeating-linear-gradient(90deg,var(--harbor) 0 2px,transparent 2px 4px,var(--harbor) 4px 7px,transparent 7px 9px,var(--harbor) 9px 10px,transparent 10px 13px);opacity:.85;border-radius:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--harbor);color:#fff;text-decoration:none;font-weight:700;padding:13px 18px;border-radius:12px;border:0;font-size:16px;font-family:var(--body);cursor:pointer;transition:background .15s}
+.btn:hover{background:var(--deep)}
+.stub .hours{font-size:12px;margin-top:10px;font-weight:600}
+
+/* destinations */
+.dests{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:240px 240px;gap:16px}
+.card{position:relative;border-radius:22px;overflow:hidden;color:#fff;text-decoration:none;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;isolation:isolate}
+.card::before{content:"";position:absolute;inset:0;z-index:-2;background:var(--img) center/cover no-repeat}
+.card::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,26,43,0) 35%,rgba(8,26,43,.78))}
+.card svg.art{position:absolute;inset:0;width:100%;height:100%;z-index:-2}
+.card.has-photo svg.art{display:none}
+.card h3{font-family:var(--display);font-size:28px;font-weight:800;letter-spacing:-.01em;line-height:1.05}
+.card p{font-size:15px;color:#E3EEF3;margin-top:4px}
+.card .ask{margin-top:12px;display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:7px 12px;border-radius:999px;align-self:flex-start;transition:background .15s}
+.card:hover .ask{background:var(--brass);color:var(--harbor);border-color:var(--brass)}
+.card.big{grid-row:1/3}
+.card.big h3{font-size:38px}
+
+/* services */
+.services-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+.services-wrap .side p{color:var(--ink);margin-top:18px;max-width:42ch}
+.services{list-style:none;border-top:2px solid var(--harbor)}
+.services li{display:grid;grid-template-columns:48px 1fr;gap:18px;padding:24px 0;border-bottom:1px solid var(--line)}
+.mark{width:48px;height:48px;border-radius:14px;background:var(--lagoon-soft);color:var(--lagoon);display:grid;place-items:center}
+.services h3{font-family:var(--display);font-size:22px;font-weight:700;margin-bottom:4px}
+.services p{color:var(--ink);max-width:56ch}
+
+.lines{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:28px 0}
+.lines p{font-size:16px;color:var(--ink);text-align:center}
+.lines strong{color:var(--harbor)}
+
+/* voyage steps */
+.voyage{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:32px;list-style:none;margin-top:8px}
+.voyage::before{content:"";position:absolute;top:26px;left:26px;right:26px;height:2px;background:repeating-linear-gradient(90deg,var(--lagoon) 0 10px,transparent 10px 18px)}
+.voyage li{position:relative}
+.port{width:54px;height:54px;border-radius:50%;background:var(--harbor);color:var(--brass);font-family:var(--display);font-weight:800;font-size:22px;display:grid;place-items:center;margin-bottom:20px;position:relative;border:5px solid var(--foam)}
+.voyage h3{font-family:var(--display);font-size:23px;font-weight:700;margin-bottom:6px}
+.voyage p{color:var(--ink);max-width:32ch}
+
+/* reviews (hidden until real reviews are added) */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px}
+.review blockquote{font-family:var(--display);font-size:19px;font-weight:500;line-height:1.4;margin-bottom:16px}
+.review cite{font-style:normal;color:var(--muted);font-size:14px}
+
+/* faq */
+.faq-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
+details{border-bottom:1px solid var(--line);padding:20px 0}
+details:first-of-type{border-top:2px solid var(--harbor)}
+summary{cursor:pointer;list-style:none;font-family:var(--display);font-size:20px;font-weight:700;display:flex;justify-content:space-between;gap:20px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:26px;color:var(--lagoon);font-weight:500;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--ink);margin-top:10px;max-width:62ch}
+
+/* call-back */
+.callback{background:var(--lagoon);color:#fff;position:relative;overflow:hidden}
+.callback .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start;position:relative}
+.callback .side{color:#DDF2EF;margin-top:18px;max-width:38ch}
+.callback .or{margin-top:30px;font-weight:600;color:#DDF2EF}
+.callback .or a{color:#fff;font-family:var(--display);font-size:30px;font-weight:800;text-decoration:none;display:block;letter-spacing:-.01em}
+form{background:#fff;color:var(--harbor);border-radius:22px;padding:30px;display:grid;gap:14px;box-shadow:0 24px 50px -24px rgba(8,26,43,.55)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:14px;font-weight:700;margin-bottom:5px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--foam);color:var(--harbor)}
+input:focus,select:focus,textarea:focus{border-color:var(--lagoon);outline:none;background:#fff}
+form .btn{width:100%;padding:16px;font-size:17px}
+.fine{font-size:13px;color:var(--muted)}
+
+/* closing + footer */
+.closing{background:var(--harbor);color:#fff;padding:80px 0;position:relative;overflow:hidden}
+.closing .wrap{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+.closing h2{max-width:16ch}
+.closing .btn{background:var(--brass);color:var(--harbor);font-size:20px;padding:18px 30px;border-radius:14px}
+.closing .btn:hover{background:var(--brass-hi)}
+footer{background:var(--deep);color:#AFC5D3;padding:44px 0;font-size:14px}
+.disclose{border:1px solid #2A4760;border-radius:14px;padding:16px 18px;margin-bottom:22px;color:#DCE8EF}
+.disclose b{color:var(--brass-hi)}
+footer nav{display:flex;flex-wrap:wrap;gap:18px;margin-top:14px}
+footer a{color:#DCE8EF}
+
+/* mobile call bar */
+.callbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;display:none;background:var(--brass);color:var(--harbor);text-decoration:none;font-weight:800;font-size:18px;padding:16px;border-radius:16px;align-items:center;justify-content:center;gap:10px;box-shadow:0 12px 30px -10px rgba(8,26,43,.6)}
+
+@media (max-width:960px){
+  .hero-grid,.services-wrap,.faq-wrap,.callback .wrap{grid-template-columns:1fr;gap:44px}
+  .hero-grid{padding-top:130px;padding-bottom:150px}
+  .pass{transform:none;animation:none;max-width:560px}
+  .dests{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .card{min-height:220px}
+  .card.big{grid-row:auto;grid-column:1/-1;min-height:280px}
+  .reviews{grid-template-columns:1fr}
+  .section-head{flex-direction:column;align-items:start}
+  section{padding:72px 0}
+}
+@media (max-width:720px){
+  .voyage{grid-template-columns:1fr;gap:28px}
+  .voyage::before{top:26px;bottom:26px;left:26px;right:auto;width:2px;height:auto;background:repeating-linear-gradient(180deg,var(--lagoon) 0 10px,transparent 10px 18px)}
+  .voyage li{padding-left:76px}
+  .port{position:absolute;left:0;top:0;margin:0}
+}
+@media (max-width:600px){
+  .top-call b{display:none}
+  .pass{grid-template-columns:1fr}
+  .stub{border-radius:0 0 20px 20px;border-left:0;border-top:2px dashed rgba(15,42,68,.45)}
+  .stub::before,.stub::after{top:-14px;bottom:auto}
+  .stub::before{left:-13px}.stub::after{left:auto;right:-13px}
+  .fields{grid-template-columns:1fr}
+  .dests{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr}
+  .callbar{display:flex}
+  .hero .lead{font-size:18px}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></symbol>
+  <symbol id="plane" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7h-3l2-7H7l-2 2H2l2-4-2-4h3l2 2h4L9 3h3z"/></symbol>
+  <symbol id="group" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M16 3.1a4 4 0 0 1 0 7.8M21 21v-2a4 4 0 0 0-3-3.9"/></symbol>
+  <symbol id="medal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="15" r="6"/><path d="M8.5 9.5 6 3h4l2 5 2-5h4l-2.5 6.5"/></symbol>
+  <symbol id="clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></symbol>
+  <symbol id="anchor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v14M5 12H2a10 10 0 0 0 20 0h-3M8 11h8"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/">[YOUR AGENCY NAME]<small>Independent cruise travel agency</small></a>
+    <a class="top-call" href="tel:[PHONE DIGITS]"><svg class="ico"><use href="#phone"/></svg><b>Talk to an agent</b><span>[PHONE DISPLAY]</span></a>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <svg class="scene" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#0A1F33"/>
+          <stop offset=".45" stop-color="#173D5E"/>
+          <stop offset=".72" stop-color="#5E6E8A"/>
+          <stop offset=".86" stop-color="#E6A95C"/>
+          <stop offset="1" stop-color="#F3C873"/>
+        </linearGradient>
+        <radialGradient id="glow" cx="76%" cy="78%" r="38%">
+          <stop offset="0" stop-color="#FFD98A" stop-opacity=".55"/>
+          <stop offset="1" stop-color="#FFD98A" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#1A4A6B"/>
+          <stop offset="1" stop-color="#0B2238"/>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="760" fill="url(#sky)"/>
+      <rect width="1440" height="760" fill="url(#glow)"/>
+      <circle cx="1095" cy="585" r="78" fill="#F7D38A"/>
+      <g fill="#0B2238" opacity=".9">
+        <path d="M1150 578h178l-14 22h-152z"/>
+        <path d="M1172 562h138v16h-138zM1190 550h104v12h-104zM1210 540h66v10h-66z"/>
+        <path d="M1262 522h14v18h-14z"/>
+      </g>
+      <path d="M0 600h1440v160H0z" fill="url(#sea)"/>
+      <path d="M0 602h1440" stroke="#F7D38A" stroke-opacity=".5" stroke-width="2"/>
+      <g fill="#F7D38A" opacity=".35">
+        <rect x="1040" y="612" width="110" height="3" rx="1.5"/>
+        <rect x="1060" y="626" width="72" height="3" rx="1.5"/>
+        <rect x="1075" y="640" width="44" height="3" rx="1.5"/>
+      </g>
+      <path d="M0 668c160-26 320-26 480 0s320 26 480 0 320-26 480 0v92H0z" fill="#0F2A44"/>
+      <path d="M0 712c160-22 320-22 480 0s320 22 480 0 320-22 480 0v48H0z" fill="#F5F9FA"/>
+    </svg>
+
+    <div class="wrap hero-grid">
+      <div>
+        <div class="status" id="status"><span class="dot"></span><span id="status-text">Agents available now</span></div>
+        <h1>Your cruise, planned by someone who picks up the phone.</h1>
+        <p class="lead">Tell us where you want to sail. We'll sort the ship, the cabin, the flights and the fine print.</p>
+        <ul class="ticks">
+          <li><svg class="ico"><use href="#check"/></svg>Flight + cruise packages in one call</li>
+          <li><svg class="ico"><use href="#check"/></svg>Weddings, reunions and group cabins</li>
+          <li><svg class="ico"><use href="#check"/></svg>Senior, veteran and military rates checked for you</li>
+        </ul>
+      </div>
+
+      <div class="pass" aria-label="Call details">
+        <div class="pass-main">
+          <div class="pass-head"><b><svg class="ico"><use href="#anchor"/></svg>Boarding pass</b><span>Agent on duty</span></div>
+          <div class="route" aria-hidden="true">YOU <i></i> SEA</div>
+          <dl class="fields">
+            <div><dt>Passenger</dt><dd>You, plus whoever's coming along</dd></div>
+            <div><dt>Sailing to</dt><dd>Caribbean, Alaska, Europe</dd></div>
+            <div><dt>Includes</dt><dd>Ship, cabin, flights, hotel</dd></div>
+          </dl>
+        </div>
+        <div class="stub">
+          <small>Call to board</small>
+          <div class="num">[PHONE DISPLAY]</div>
+          <a class="btn" href="tel:[PHONE DIGITS]"><svg class="ico"><use href="#phone"/></svg>Call now</a>
+          <div class="hours">[DAYS] · [HOURS, e.g. 8am–11pm ET]</div>
+          <div class="barcode" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Where do you want to wake up?</h2>
+        <p>Tell an agent the destination and your dates. We'll compare sailings across cruise lines for you.</p>
+      </div>
+      <div class="dests">
+        <a class="card big" href="tel:[PHONE DIGITS]" style="--img:none">
+          <svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="500" fill="#2BB3B1"/><rect y="0" width="400" height="230" fill="#8FD9E8"/><circle cx="300" cy="110" r="46" fill="#FFE29A"/><path d="M0 230c70-14 130-14 200 0s130 14 200 0v270H0z" fill="#1C9C9A"/><path d="M0 300c70-12 130-12 200 0s130 12 200 0v200H0z" fill="#17807F"/><path d="M0 390h400v110H0z" fill="#F2DFB4"/><path d="M60 390c6-60 10-110 30-160" stroke="#5B4632" stroke-width="7" fill="none"/><path d="M90 230c-30-6-55 4-70 20M90 230c-6-26 6-46 26-56M90 230c26-14 52-10 70 6M90 230c20 8 34 26 36 46" stroke="#2E7D4F" stroke-width="12" stroke-linecap="round" fill="none"/></svg>
+          <h3>Caribbean</h3>
+          <p>Beaches and turquoise water from Miami, Fort Lauderdale and Galveston</p>
+          <span class="ask"><svg class="ico"><use href="#phone"/></svg>Ask about Caribbean sailings</span>
+        </a>
+        <a class="card" href="tel:[PHONE DIGITS]" style="--img:none">
+          <svg class="art" viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="240" fill="#C9E3F0"/><path d="M0 170 90 60l60 70 70-100 90 110 90-60v160H0z" fill="#7FA6BF"/><path d="M90 60l-22 26h44zM220 30l-26 36h52zM310 140l-18 22h36z" fill="#FFFFFF"/><path d="M0 180h400v60H0z" fill="#2F6E8F"/><path d="M240 180h90l-10 14h-70z" fill="#EAF4F8"/></svg>
+          <h3>Alaska</h3>
+          <p>Glaciers and wildlife from Seattle or Vancouver</p>
+          <span class="ask"><svg class="ico"><use href="#phone"/></svg>Ask about Alaska</span>
+        </a>
+        <a class="card" href="tel:[PHONE DIGITS]" style="--img:none">
+          <svg class="art" viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="240" fill="#F6D7A7"/><circle cx="320" cy="70" r="34" fill="#FFF1CC"/><path d="M0 170h400v70H0z" fill="#2C6FA8"/><path d="M40 170V110h50v60M100 170V95h46v75M156 170v-50h40v50" fill="#FFFFFF"/><path d="M100 95c0-16 46-16 46 0z" fill="#2C6FA8"/><path d="M40 110h50M156 120h40" stroke="#E9B44C" stroke-width="4"/></svg>
+          <h3>Mediterranean</h3>
+          <p>Rome, Barcelona and the Greek islands</p>
+          <span class="ask"><svg class="ico"><use href="#phone"/></svg>Ask about Europe</span>
+        </a>
+        <a class="card" href="tel:[PHONE DIGITS]" style="--img:none">
+          <svg class="art" viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="240" fill="#FBD3B0"/><circle cx="90" cy="80" r="30" fill="#FFF0C9"/><path d="M0 150h400v90H0z" fill="#33B5C9"/><path d="M0 200c80-14 160-14 240 0s120 10 160 4v36H0z" fill="#F4E3BC"/><path d="M250 150c40-30 90-30 130 0z" fill="#3F8F5A"/></svg>
+          <h3>Bahamas</h3>
+          <p>Short 3 to 5 night getaways from Florida</p>
+          <span class="ask"><svg class="ico"><use href="#phone"/></svg>Ask about short cruises</span>
+        </a>
+        <a class="card" href="tel:[PHONE DIGITS]" style="--img:none">
+          <svg class="art" viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="240" fill="#F4B6A0"/><circle cx="300" cy="150" r="44" fill="#FFD891"/><path d="M0 160h400v80H0z" fill="#3F6FA0"/><path d="M0 160c40-50 90-70 150-60l40 60z" fill="#8A5A44"/><path d="M0 185h400" stroke="#FFD891" stroke-opacity=".5" stroke-width="3"/></svg>
+          <h3>Mexican Riviera</h3>
+          <p>Cabo, Mazatlán and Puerto Vallarta from the West Coast</p>
+          <span class="ask"><svg class="ico"><use href="#phone"/></svg>Ask about Mexico</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap services-wrap">
+      <div class="side">
+        <h2>The trips that are easier to talk through</h2>
+        <p>Booking websites are fine for a simple sailing. When there are flights to line up, a group to coordinate or a discount to qualify for, a person on the phone saves you hours.</p>
+      </div>
+      <ul class="services">
+        <li><div class="mark"><svg class="ico"><use href="#plane"/></svg></div><div><h3>Flight + cruise packages</h3><p>We match flights, a pre-cruise hotel and port transfers to your sailing date, so nothing is left to chance on embarkation day.</p></div></li>
+        <li><div class="mark"><svg class="ico"><use href="#group"/></svg></div><div><h3>Weddings and groups</h3><p>Blocking cabins for a wedding, family reunion or office trip? We hold the group rate and manage every guest's booking.</p></div></li>
+        <li><div class="mark"><svg class="ico"><use href="#medal"/></svg></div><div><h3>Senior, veteran and military rates</h3><p>We check every special rate you might qualify for, including senior, military, veteran and first responder fares.</p></div></li>
+        <li><div class="mark"><svg class="ico"><use href="#clock"/></svg></div><div><h3>Last-minute sailings</h3><p>Leaving in the next few weeks? We know which ships still have cabins and how to get you to the port in time.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="lines">
+    <div class="wrap"><p>We book sailings on <strong>Carnival, Princess, Royal Caribbean, Norwegian, Holland America, MSC, Celebrity, Disney</strong> and more. We're independent and not affiliated with any cruise line.</p></div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head"><h2>From first call to setting sail</h2></div>
+      <ol class="voyage">
+        <li><div class="port">1</div><h3>Call us</h3><p>Tell us where, when, who's travelling and your budget.</p></li>
+        <li><div class="port">2</div><h3>Compare your options</h3><p>We lay out ships, cabins and full prices side by side.</p></li>
+        <li><div class="port">3</div><h3>Book and relax</h3><p>Everything confirmed in writing, and we stay with you until you sail.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- REVIEWS: remove the word "hidden" below once you paste in three GENUINE customer reviews -->
+  <section style="padding-top:0" hidden>
+    <div class="wrap">
+      <div class="section-head"><h2>What our travellers say</h2></div>
+      <div class="reviews">
+        <div class="review"><blockquote>[Real customer review]</blockquote><cite>[First name, city]</cite></div>
+        <div class="review"><blockquote>[Real customer review]</blockquote><cite>[First name, city]</cite></div>
+        <div class="review"><blockquote>[Real customer review]</blockquote><cite>[First name, city]</cite></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap faq-wrap">
+      <div><h2>Good to know before you call</h2></div>
+      <div>
+        <details open><summary>Are you the cruise line?</summary><p>No. We're an independent travel agency that books sailings on many cruise lines. We aren't affiliated with or endorsed by any of them.</p></details>
+        <details><summary>Does it cost more to book with you?</summary><p>[Answer truthfully, e.g. "Cruise fares are the same as booking direct, and we don't add booking fees."]</p></details>
+        <details><summary>Can you book my flights and hotel too?</summary><p>Yes. We can add flights, a pre-cruise hotel and transfers so your whole trip is planned around your sailing.</p></details>
+        <details><summary>I already booked directly with a cruise line. Can you change it?</summary><p>Changes to a booking made directly with a cruise line usually have to go through that cruise line. We're happy to help you plan your next sailing.</p></details>
+        <details><summary>What happens after I call?</summary><p>An agent asks a few questions, compares options for you and sends everything in writing. Nothing is booked until you say yes.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="callback" id="callback">
+    <div class="wrap">
+      <div>
+        <h2>Rather we call you?</h2>
+        <p class="side">Leave your details and an agent will call you back, usually within the hour during opening times.</p>
+        <p class="or">Or call us directly<a href="tel:[PHONE DIGITS]">[PHONE DISPLAY]</a></p>
+      </div>
+      <form action="[FORM HANDLER URL]" method="POST">
+        <div class="row">
+          <div><label for="name">Your name</label><input id="name" name="name" required autocomplete="name"></div>
+          <div><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" required autocomplete="tel"></div>
+        </div>
+        <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
+        <div class="row">
+          <div><label for="month">When do you want to sail?</label><input id="month" name="month" placeholder="March 2027"></div>
+          <div><label for="guests">Guests</label><input id="guests" name="guests" type="number" min="1" value="2"></div>
+        </div>
+        <div><label for="trip">What are you planning?</label>
+          <select id="trip" name="trip">
+            <option>A cruise</option>
+            <option>Flight + cruise package</option>
+            <option>Wedding or group cruise</option>
+            <option>Senior or military rate</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div><label for="notes">Anything we should know?</label><textarea id="notes" name="notes" rows="3"></textarea></div>
+        <button class="btn" type="submit">Request a call back</button>
+        <p class="fine">By sending this form you agree we may contact you about your trip by phone or email. Read our <a href="/privacy">privacy policy</a>.</p>
+      </form>
+    </div>
+  </section>
+
+  <div class="closing">
+    <div class="wrap">
+      <h2>Your cabin's waiting.</h2>
+      <a class="btn" href="tel:[PHONE DIGITS]"><svg class="ico"><use href="#phone"/></svg>Call [PHONE DISPLAY]</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="disclose"><b>Independent travel agency.</b> [YOUR AGENCY NAME] is an independent seller of travel. We are not affiliated with, endorsed by, or operated by any cruise line. Cruise line names are used only to identify the sailings we sell.</p>
+    <p><strong>[YOUR AGENCY NAME]</strong>, [STREET ADDRESS, CITY, STATE/COUNTRY] · <a href="tel:[PHONE DIGITS]">[PHONE DISPLAY]</a> · <a href="mailto:[EMAIL]">[EMAIL]</a></p>
+    <p>[Seller of Travel registration numbers, if applicable]</p>
+    <nav><a href="/privacy">Privacy policy</a><a href="/terms">Terms and conditions</a><a href="/contact">Contact us</a></nav>
+    <p style="margin-top:14px">© 2026 [YOUR AGENCY NAME]</p>
+  </div>
+</footer>
+
+<a class="callbar" href="tel:[PHONE DIGITS]"><svg class="ico"><use href="#phone"/></svg>Call [PHONE DISPLAY]</a>
+
+<script>
+  /* Set your real call-centre hours here (24h clock, US Eastern time). Days: 0 = Sunday ... 6 = Saturday */
+  const HOURS = { open: 8, close: 23, days: [0,1,2,3,4,5,6], tz: "America/New_York" };
+
+  (function () {
+    try {
+      const parts = new Intl.DateTimeFormat("en-US", { timeZone: HOURS.tz, hour: "numeric", hourCycle: "h23", weekday: "short" }).formatToParts(new Date());
+      const hour = parseInt(parts.find(p => p.type === "hour").value, 10);
+      const day = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(parts.find(p => p.type === "weekday").value);
+      const open = HOURS.days.includes(day) && hour >= HOURS.open && hour < HOURS.close;
+      if (!open) {
+        document.getElementById("status").classList.add("closed");
+        const t = document.getElementById("status-text");
+        t.textContent = "We're closed right now. Request a call back";
+        t.parentElement.style.cursor = "pointer";
+        t.parentElement.onclick = () => document.getElementById("callback").scrollIntoView({ behavior: "smooth" });
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<!-- Paste your Google Ads tag and website call conversion snippet here -->
+</body>
+</html>
